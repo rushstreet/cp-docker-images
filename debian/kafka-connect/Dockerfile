@@ -38,6 +38,6 @@ RUN echo "===> Installing JDBC, Elasticsearch and Hadoop connectors ..." \
     && echo "===> Cleaning up ..."  \
     && apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/*
 
-COPY drivers/ojdbc6.jar /usr/share/java
-RUN ln -s /usr/share/java/mysql.jar /usr/share/java/kafka/
 COPY include/datasources /datasources
+COPY drivers/ojdbc6.jar /usr/share/java/ojdbc6.jar
+RUN ln -s /usr/share/java/mysql.jar /usr/share/java/kafka/
