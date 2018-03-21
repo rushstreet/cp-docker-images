@@ -48,7 +48,10 @@ spec:
               name: casino-property
               key: connect-group-id
         - name: "CONNECT_CONFIG_STORAGE_TOPIC"
-          value: "connect-configs-2"
+          valueFrom:
+            secretKeyRef:
+              name: casino-property
+              key: connect-config-storage-topic
         - name: "CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR"
           value: "3"
         - name: "CONNECT_OFFSET_FLUSH_INTERVAL_MS"
