@@ -43,7 +43,10 @@ spec:
         - name: "CONNECT_REST_PORT"
           value: "8083"
         - name: "CONNECT_GROUP_ID"
-          value: "connect-group-1"
+          valueFrom:
+            secretKeyRef:
+              name: casino-property
+              key: connect-group-id
         - name: "CONNECT_CONFIG_STORAGE_TOPIC"
           value: "connect-configs-2"
         - name: "CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR"
