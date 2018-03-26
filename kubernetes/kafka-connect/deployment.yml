@@ -95,7 +95,7 @@ spec:
               name: aws-s3-credentials
               key: aws-secret-access-key
         - name: "KAFKA_HEAP_OPTS"
-          value: "-Xms512m -Xmx1g"
+          value: "-Xms512m -Xmx2g"
       "imagePullSecrets": [
         {
           "name": "aws-ecr-credentials"
