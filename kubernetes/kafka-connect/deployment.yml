@@ -40,12 +40,27 @@ spec:
           value: "SASL_SSL"
         - name: "CONNECT_PRODUCER_SASL_MECHANISM"
           value: "PLAIN"
+        - name: "CONNECT_CONSUMER_SASL_JAAS_CONFIG"
+          valueFrom:
+            secretKeyRef:
+              name: kafka-connect-bootstrap
+              key: connect-consumer-sasl-jaas-config
+        - name: "CONNECT_CONSUMER_SECURITY_PROTOCOL"
+          value: "SASL_SSL"
+        - name: "CONNECT_CONSUMER_SASL_MECHANISM"
+          value: "PLAIN"
         - name: "CONNECT_REST_PORT"
           value: "8083"
         - name: "CONNECT_GROUP_ID"
-          value: "connect-group-1"
+          valueFrom:
+            secretKeyRef:
+              name: casino-property
+              key: connect-group-id
         - name: "CONNECT_CONFIG_STORAGE_TOPIC"
-          value: "connect-configs-2"
+          valueFrom:
+            secretKeyRef:
+              name: casino-property
+              key: connect-config-storage-topic
         - name: "CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR"
           value: "3"
         - name: "CONNECT_OFFSET_FLUSH_INTERVAL_MS"
@@ -76,6 +91,22 @@ spec:
           value: "/usr/share/java"
         - name: "CONNECT_BUFFER_MEMORY"
           value: "50000"
+        - name: "CONNECT_LOG4J_LOGGERS"
+          value: "INFO"
+        - name: "AWS_REGION"
+          value: "us-east-1"
+        - name: "AWS_ACCESS_KEY_ID"
+          valueFrom:
+            secretKeyRef:
+              name: aws-s3-credentials
+              key: aws-access-key-id
+        - name: "AWS_SECRET_ACCESS_KEY"
+          valueFrom:
+            secretKeyRef:
+              name: aws-s3-credentials
+              key: aws-secret-access-key
+        - name: "KAFKA_HEAP_OPTS"
+          value: "-Xms512m -Xmx1g"
       "imagePullSecrets": [
         {
           "name": "aws-ecr-credentials"
