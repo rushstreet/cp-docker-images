@@ -93,12 +93,12 @@ spec:
           value: "50000"
         - name: "CONNECT_LOG4J_LOGGERS"
           value: "INFO"
-        - name: "AWS_REGION"
-          value: "us-east-1"
         - name: "CONNECT_ACCESS_CONTROL_ALLOW_ORIGIN"
           value: "*"
         - name: "CONNECT_ACCESS_CONTROL_ALLOW_METHODS"
           value: "GET,POST,PUT,DELETE,OPTIONS,HEAD"
+        - name: "AWS_REGION"
+          value: "us-east-1"
         - name: "AWS_ACCESS_KEY_ID"
           valueFrom:
             secretKeyRef:
