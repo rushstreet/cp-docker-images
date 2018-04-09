@@ -95,9 +95,9 @@ spec:
           value: "INFO"
         - name: "AWS_REGION"
           value: "us-east-1"
-        - name: "ACCESS_CONTROL_ALLOW_ORIGIN"
+        - name: "CONNECT_ACCESS_CONTROL_ALLOW_ORIGIN"
           value: "*"
-        - name: "ACCESS_CONTROL_ALLOW_METHODS"
+        - name: "CONNECT_ACCESS_CONTROL_ALLOW_METHODS"
           value: "GET,POST,PUT,DELETE,OPTIONS,HEAD"
         - name: "AWS_ACCESS_KEY_ID"
           valueFrom:
