@@ -39,5 +39,6 @@ RUN echo "===> Installing JDBC, Elasticsearch and Hadoop connectors ..." \
     && apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/*
 
 ADD drivers/ojdbc6.jar /usr/share/java/kafka/
+ADD drivers/SMTs_n_stuff.jar /usr/share/java/kafka/
 RUN ln -s /usr/share/java/mysql.jar /usr/share/java/kafka/
 COPY include/datasources /datasources
