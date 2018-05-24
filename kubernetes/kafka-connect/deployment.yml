@@ -21,7 +21,7 @@ spec:
         - name: "CONNECT_REST_ADVERTISED_HOST_NAME"
           value: $HOSTNAME
         - name: "CONNECT_BOOTSTRAP_SERVERS"
-          value: "r0.kafka.rush-street-gaming.aws.confluent.cloud:9092,r0.kafka.rush-street-gaming.aws.confluent.cloud:9093,r0.kafka.rush-street-gaming.aws.confluent.cloud:9094"
+          value: "pkc-l95v4.us-east-1.aws.confluent.cloud:9092"
         - name: CONNECT_SASL_JAAS_CONFIG
           valueFrom:
             secretKeyRef:
