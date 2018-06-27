@@ -61,20 +61,26 @@ spec:
             secretKeyRef:
               name: casino-property
               key: connect-config-storage-topic
+        - name: "CONNECT_OFFSET_STORAGE_TOPIC"
+          valueFrom:
+            secretKeyRef:
+              name: casino-property
+              key: connect-offset-storage-topic
+        - name: "CONNECT_STATUS_STORAGE_TOPIC"
+          valueFrom:
+            secretKeyRef:
+              name: casino-property
+              key: connect-status-storage-topic
         - name: "CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR"
+          value: "3"
+        - name: "CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR"
+          value: "3"
+        - name: "CONNECT_STATUS_STORAGE_REPLICATION_FACTOR"
           value: "3"
         - name: "CONNECT_OFFSET_FLUSH_INTERVAL_MS"
           value: "10000"
         - name: "CONNECT_OFFSET_FLUSH_TIMEOUT_MS"
           value: "60000"
-        - name: "CONNECT_OFFSET_STORAGE_TOPIC"
-          value: "connect-offsets"
-        - name: "CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR"
-          value: "3"
-        - name: "CONNECT_STATUS_STORAGE_TOPIC"
-          value: "connect-status"
-        - name: "CONNECT_STATUS_STORAGE_REPLICATION_FACTOR"
-          value: "3"
         - name: "CONNECT_KEY_CONVERTER"
           value: "io.confluent.connect.avro.AvroConverter"
         - name: "CONNECT_KEY_CONVERTER_SCHEMA_REGISTRY_URL"
@@ -93,6 +99,8 @@ spec:
           value: "50000"
         - name: "CONNECT_LOG4J_LOGGERS"
           value: "INFO"
+        - name: "CONNECT_LOG4J_ROOT_LOGLEVEL"
+          value: "INFO"
         - name: "CONNECT_ACCESS_CONTROL_ALLOW_ORIGIN"
           value: "*"
         - name: "CONNECT_ACCESS_CONTROL_ALLOW_METHODS"
@@ -110,7 +118,7 @@ spec:
               name: aws-s3-credentials
               key: aws-secret-access-key
         - name: "KAFKA_HEAP_OPTS"
-          value: "-Xms512m -Xmx1g"
+          value: "-Xms4g -Xmx4g"
       "imagePullSecrets": [
         {
           "name": "aws-ecr-credentials"
