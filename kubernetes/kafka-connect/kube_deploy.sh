@@ -1,1 +1,1 @@
-echo "hello" > world.txt
+echo "hello" > /home/ubuntu/world.txt
