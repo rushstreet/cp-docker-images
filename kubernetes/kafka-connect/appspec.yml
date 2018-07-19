@@ -2,6 +2,6 @@ version: 0.0
 os: linux
 hooks:
   Install:
-    - location: echo hello > world.txt
+    - location: kubernetes/kafka-connect/kube_deploy.sh
       timeout: 300
       runas: root
