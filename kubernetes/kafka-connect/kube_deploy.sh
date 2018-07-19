@@ -1,1 +1,1 @@
-echo "hello" > /home/ubuntu/world.txt
+kubectl apply -f kubernetes/kafka-connect/deployment.yml
