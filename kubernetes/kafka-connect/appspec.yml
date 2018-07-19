@@ -2,6 +2,6 @@ version: 0.0
 os: linux
 hooks:
   Install:
-    - location: cat ./buildspec.yml
+    - location: echo hello > world.txt
       timeout: 300
       runas: root
