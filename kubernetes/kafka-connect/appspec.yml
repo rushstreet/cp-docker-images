@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: ./tag.txt
+  - source: /
     destination: /home/ubuntu/
 hooks:
   BeforeInstall:
