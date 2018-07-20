@@ -1,1 +1,1 @@
-kubectl apply -f deployment.yml
+kubectl apply -f kubernetes/kafka-connect/deployment.yml > /home/ubuntu/hello.txt
