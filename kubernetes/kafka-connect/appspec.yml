@@ -4,7 +4,7 @@ files:
   - source: ./tag.txt
     destination: /home/ubuntu
 hooks:
-  BeforeInstall:
+  AfterInstall:
     - location: kubernetes/kafka-connect/kube_deploy.sh
       timeout: 300
       runas: root
