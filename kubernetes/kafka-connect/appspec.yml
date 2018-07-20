@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: ./tag.txt
-    destination: /home/ubuntu
+  - source: kubernetes/kafka-connect/deployment.yml
+    destination: /tmp
 hooks:
   AfterInstall:
     - location: kubernetes/kafka-connect/kube_deploy.sh
