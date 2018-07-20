@@ -1,1 +1,1 @@
-#kubectl apply -f /home/ubuntu/tag.txt
+kubectl apply -f /tmp/deployment.yml
