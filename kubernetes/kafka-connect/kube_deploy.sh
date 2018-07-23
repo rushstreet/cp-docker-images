@@ -1,1 +1,1 @@
-kubectl apply -f /tmp/deployment.yml
+kubectl apply -f /tmp/deployment.yml --server="https://10.100.5.13:8080/r/projects/1a7/kubernetes:6443"
