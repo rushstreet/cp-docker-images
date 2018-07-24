@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: kubernetes/kafka-connect/deployment.yml
+  - source: kubernetes/kafka-connect/
     destination: /tmp
 hooks:
   AfterInstall:
