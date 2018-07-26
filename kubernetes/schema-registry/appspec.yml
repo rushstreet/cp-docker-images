@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: kubernetes/schema-registry/
+    destination: /tmp
+hooks:
+  AfterInstall:
+    - location: kubernetes/schema-registry/kube_deploy.sh
+      timeout: 300
+      runas: root
