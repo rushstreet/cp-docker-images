@@ -4,7 +4,7 @@ kind: Service
 metadata:
   # Note: Service name cannot be schema-registry otherwise environment variable used by application will be overwrite in container due to service creation.
   # See: https://kubernetes.io/docs/concepts/containers/container-environment-variables/
-  name: schemaregistry
+  name: schema-registry
   labels:
     app: schema-registry
 spec:
