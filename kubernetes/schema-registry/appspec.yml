@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: kubernetes/schema-registry/
-    destination: /tmp
+    destination: /tmp/schema-registry
 hooks:
   AfterInstall:
     - location: kubernetes/schema-registry/kube_deploy.sh
